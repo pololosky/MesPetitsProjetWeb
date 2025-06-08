@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tictactoe.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="s1">
+      <h1>TIC TAC TOE</h1>
+      <h2>Les bleus commencent toujours</h2>
+      <div class="plateau">
+        <div class="case">
+          <button id="0" class="formes" onclick="jeu(0)"></button>
+        </div>
+        <div class="case">
+          <button id="1" class="formes" onclick="jeu(1)"></button>
+        </div>
+        <div class="case">
+          <button id="2" class="formes" onclick="jeu(2)"></button>
+        </div>
+        <div class="case">
+          <button id="3" class="formes" onclick="jeu(3)"></button>
+        </div>
+        <div class="case">
+          <button id="4" class="formes" onclick="jeu(4)"></button>
+        </div>
+        <div class="case">
+          <button id="5" class="formes" onclick="jeu(5)"></button>
+        </div>
+        <div class="case">
+          <button id="6" class="formes" onclick="jeu(6)"></button>
+        </div>
+        <div class="case">
+          <button id="7" class="formes" onclick="jeu(7)"></button>
+        </div>
+        <div class="case">
+          <button id="8" class="formes" onclick="jeu(8)"></button>
+        </div>
+      </div>
+    </section>
+    <section class="scores">
+      <h2>VOS SCORES</h2>
+      <div class="score">
+        <input type="text" id="cercle" readonly>
+        <i class="ri-circle-line"></i>
+      </div>
+      <div class="score">
+        <input type="text" id="croix" readonly>
+        <i class="ri-close-large-line"></i>
+      </div>
+      <button class="restart" onclick="rafraichirPage()">RECOMMENCER</button>
+    </section>
+    <script src="tictactoe.js"></script>
+  </body>
+</html>

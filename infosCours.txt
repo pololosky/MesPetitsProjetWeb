@@ -1,0 +1,45 @@
+NODE.JS DETAILS
+* nodejs permet d'executer du js
+* pour verifier qu'on a installer node.js on tape dans le terminal la commande : node --version
+* pour executer notre code js on tape dans le termi node <nom du fichier>.<extension>
+
+UTILISATION DE quokka
+* quokka permet d'executer du js directement sans passer apr le terminal
+* pour activer quokka on fait ctrl+shift+P et on tape quokka.js : start on current file
+
+COURS SUR LE JS MEME
+* pour afficher en js c'est : console.log("Texte");
+* pour declarer des variables c'est : let (on peut egalement utiliser var mais il est vieux et plus beaucoup utiliser)
+    exple1 : let name = "Kaleb"
+    exple2 : let age = 25
+*pour declarer une constante (variable non modifiable) en js c'est : constante
+    exple : const pi = 3.14
+*pour concatener on peut utiliser + ou ,
+    exple1 : console.log("Nom: " + name)
+    exple2 : console.log("Nom: " , name)
+*lorsque lors de son utilisation une variable est barre cela signifie que ce nom de variable est reserver 
+et qu'il faut le changer pour eviter les problèmes.
+*les types de donnees en js sont :
+    _ String pour les chaine de cara
+    _ boolean 
+    _ number 
+    _ bigInt pour stocker les nombres trop grands
+    _ symbol un caractere
+    _ null un variable qui dit qu'il n'y a rien 
+    _ undefined pas definit
+* pour declarer une string on peut utiliser trois symbols : "" , '', ``
+* le `` permet de concatener de maniere plus optimal : soit deux let nom = "kaka";
+    _ facon classique : let add = "Bonjour" + nom
+    _ facon optimale : let add = "Bonjour ${nom}"
+* pour recuperer le premier cara d'un string : let first = nom[0] (nom etant le nom de la var string)
+* pour recuperer la longueur d'un string : nom.length
+* pour verifier si un mot se trouve dans un chaine : nom.include("le mot")
+*les fonction String() et Number() permettent de transformer soit en string soit en Number
+*en js le chaine rempli et les nombres non nuls sont true et le reste est false
+*pour declarer une fonction : function nom(){} ou cont nom = (parametre) =>{} (c'est une arrow function)
+
+
+SPECIALE ORIENTER HTML ET classique
+*pour referencer un element html dans js : const btn = document.getElementById("nom de l'id de l'element html")
+*pour effectuer une action sur un boutton on peut dans ce boutton faire un onclick = "nomDeLaFonctionJS()"
+*pour ajoueter du html a un ele depuis js : btn.innerHTML = "<h2>Bonjour</h2>"

@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header{
+  display: flex;
+  gap: 160px;
+  padding: 10px;
+  justify-content: center;
+}
+.header button{
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px gray;
+  transition: all 0.5s ease;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.header button:hover{
+  transform: scale(1.03);
+  background-color: rgb(222, 222, 222);
+}
+#principal,#conversion{
+  width: 100%;
+  gap: 20px;
+}
+#principal  select,#conversion select{
+  width: 110px;
+}
+#principal{
+  display: flex;
+}
+#conversion{
+  display: none;
+}
+#de{
+  display: none;
+}
+#conversion_btn{
+  display: none;
+}
+.calcu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input {
+  width: auto;
+  height: 80px;
+  font-size: 40px;
+  padding: 10px;
+  text-align: right;
+  border-radius: 10px;
+}
+.symboles {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  column-gap: 10px;
+  grid-template-rows: repeat(4, 110px);
+  row-gap: 10px;
+}
+.symboles button{
+  border: none;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  box-shadow: 1px 2px 3px gray;
+  transition: all 0.5s ease;
+}
+.symboles button:hover{
+  transform: scale(1.03);
+  background-color: rgb(222, 222, 222);
+}
+.symboles .operateurs{
+  background-color: rgba(255, 176, 49, 0.836);
+}
+.symboles .operateurs:hover{
+  background-color: rgb(244, 142, 0);
+}
+.symboles .red{
+  background-color: red;
+}
+.symboles .red:hover{
+   background-color: rgb(202, 0, 0);
+}

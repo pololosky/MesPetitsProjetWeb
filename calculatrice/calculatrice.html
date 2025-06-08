@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calculatrice.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>CALCULATRICE</h1>
+      <button onclick="shoxConversion()" id="conversion_btn">Convertir</button>
+    </div>
+    <!-- <form action=""> -->
+    <div class="calcu">
+      <div id="principal">
+        <input type="text" id="ecran" readonly />
+        <select name="" id="de">
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+          <option value="BTC">BTC</option>
+          <option value="XOF">XOF</option>
+        </select>
+      </div>
+      <div id="conversion">
+        <input type="text" id="ecran-conversion" readonly />
+        <select name="" id="a">
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+          <option value="BTC">BTC</option>
+          <option value="XOF">XOF</option>
+        </select>
+      </div>
+      <div class="symboles" id="symboles">
+        <button class="chiffre" onclick="ajouter(1)">1</button>
+        <button class="chiffre" onclick="ajouter(2)">2</button>
+        <button class="chiffre" onclick="ajouter(3)">3</button>
+        <button class="operateurs" onclick="symbole('+')">+</button>
+        <button class="chiffre" onclick="ajouter(4)">4</button>
+        <button class="chiffre" onclick="ajouter(5)">5</button>
+        <button class="chiffre" onclick="ajouter(6)">6</button>
+        <button class="operateurs" onclick="symbole('-')">-</button>
+        <button class="chiffre" onclick="ajouter(7)">7</button>
+        <button class="chiffre" onclick="ajouter(8)">8</button>
+        <button class="chiffre" onclick="ajouter(9)">9</button>
+        <button class="operateurs" onclick="symbole('*')">x</button>
+        <button class="chiffre" onclick="ajouter(0)">0</button>
+        <button class="egale" onclick="resultat(1)">=</button>
+        <button class="red" onclick="resultat(0)">Ctr</button>
+        <button class="operateurs" onclick="symbole('/')">/</button>
+      </div>
+    </div>
+    <!-- </form> -->
+  </body>
+  <script src="calculatrice.js"></script>
+</html>
