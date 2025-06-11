@@ -1,11 +1,13 @@
 let tours = 0;
-let moves = [];
+let moves = new Array(9);
 let countCercle = 0;
 let countCroix = 0;
 const scoreCercle = document.getElementById("cercle");
 const scoreCroix = document.getElementById("croix");
 scoreCercle.value = 0;
 scoreCroix.value = 0;
+
+// alert(moves.length)
 
 function jeu(nbr) {
   const forme = document.getElementById(`${nbr}`);
@@ -23,19 +25,21 @@ function jeu(nbr) {
   //recuperation des cinqs premier
   if (tours <= 9) {
     moves[nbr] = forme.innerHTML;
+    if (tours == 9) {
+      refrseshTab(); //rafrachir la table quand on arrive a 9 tours
+    }
   }
   //ici apres le 5eme tours on commence a verifier les victoires
-  if (tours >= 5) {
-    verify(0, 1, 2);
-    verify(3, 4, 5);
-    verify(6, 7, 8);
-    verify(0, 3, 6);
-    verify(1, 4, 7);
-    verify(2, 5, 8);
-    verify(0, 4, 8);
-    verify(2, 4, 6);
-  }
-  if (tours == 9) refreshTab();
+  // if (tours >= 5) {
+  verify(0, 1, 2);
+  verify(3, 4, 5);
+  verify(6, 7, 8);
+  verify(0, 3, 6);
+  verify(1, 4, 7);
+  verify(2, 5, 8);
+  verify(0, 4, 8);
+  verify(2, 4, 6);
+  // }
 }
 
 //function qui verifie si on gagne ou pas
@@ -43,7 +47,8 @@ function verify(a, b, c) {
   if (
     moves[a] === moves[b] &&
     moves[b] === moves[c] &&
-    moves[a].trim() !== ""
+    moves[a].trim() !== " " &&
+    moves[a] !== null
   ) {
     alert("Manche remporter");
     getScore(moves[a]);
@@ -70,8 +75,11 @@ function refreshTab() {
   for (let i = 0; i < 9; i++) {
     const forme = document.getElementById(`${i}`);
     forme.innerHTML = "";
-    moves[i] = null;
+    // toujours une erreur a cet niveau
+    // moves[i] = null;
   }
+  moves = new Array(9);
+  alert(moves[1]);
   tours = 0;
 }
 

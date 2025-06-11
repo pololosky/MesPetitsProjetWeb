@@ -37,9 +37,26 @@ et qu'il faut le changer pour eviter les problèmes.
 *les fonction String() et Number() permettent de transformer soit en string soit en Number
 *en js le chaine rempli et les nombres non nuls sont true et le reste est false
 *pour declarer une fonction : function nom(){} ou cont nom = (parametre) =>{} (c'est une arrow function)
+*on peut egalement affecter au contenue d'une constante une fonction : const exple = diviser(2,3); 
+(diviser est la fonction bien attendu)
+*pour declarer un tableau let nom = [] (en js on ne peut pas declarer de tableau multi de facon classique)
+
+IMPORTANT LES OBJTES ET TABLEAU EN JAVASCRIPT
+*declarer un objet en js : const obj = {name: "Kaleb", age: 18} (ici ce tableau contient donc deux elements de
+types differens c'est la force de js)
+*maintenant essayons de modifier cet objet : obj.name = "giannio" (on a modifier l'attribut nom de notre objet tab)
+//
+*declarer un tableau en js : const tab = ["bonjours","Kaleb"]; (ici c'est tableau a contenant deux choses)
+*pour modifer un tableau : tab[0] = "Salut"; (ici on utilise plutot l'indice comme avec un tableau classique)
+*en declarant un autre tableau comme ceci : let tab2 = tab; toutes modifications apporter sur l'un des TABLEAU
+affectera egalement l'autre : c'est le principe de type de reference car un tableau ne contient pas des valeurs
+mais des adresses
+*avec const on ne peut pas changer les references mais seulement les contenues alors qu'avec let on peut tout 
+changer
 
 
 SPECIALE ORIENTER HTML ET classique
 *pour referencer un element html dans js : const btn = document.getElementById("nom de l'id de l'element html")
 *pour effectuer une action sur un boutton on peut dans ce boutton faire un onclick = "nomDeLaFonctionJS()"
 *pour ajoueter du html a un ele depuis js : btn.innerHTML = "<h2>Bonjour</h2>"
+*innerHTML.trim() est une fonction sur innerHTML qui permet de verifier le contenu innerHTML d'un element

@@ -11,7 +11,3 @@ function factorielle(nbr) {
 let nbrverif = 4;
 console.log(`Votre factorielle est: ${factorielle(nbrverif)}`);
 
-//les arrow function
-let teb = [];
-teb[1] = 5;
-console.log(teb[1]);
