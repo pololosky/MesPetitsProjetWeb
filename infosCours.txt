@@ -45,6 +45,7 @@ IMPORTANT LES OBJTES ET TABLEAU EN JAVASCRIPT
 *declarer un objet en js : const obj = {name: "Kaleb", age: 18} (ici ce tableau contient donc deux elements de
 types differens c'est la force de js)
 *maintenant essayons de modifier cet objet : obj.name = "giannio" (on a modifier l'attribut nom de notre objet tab)
+*pour recuperer les cles(noms des attributs) : Object.keys(obj);
 //
 *declarer un tableau en js : const tab = ["bonjours","Kaleb"]; (ici c'est tableau a contenant deux choses)
 *pour modifer un tableau : tab[0] = "Salut"; (ici on utilise plutot l'indice comme avec un tableau classique)
@@ -53,6 +54,10 @@ affectera egalement l'autre : c'est le principe de type de reference car un tabl
 mais des adresses
 *avec const on ne peut pas changer les references mais seulement les contenues alors qu'avec let on peut tout 
 changer
+*pour ajouter un element a la fin d'un tableau : tab.push("ce que tu veux");
+*pour ajouter un element au debut d'un tableau : tab.unshift("ce que tu veux");
+*pour supprimer le premier element d'un tableau : tab.shift();
+*pour supprimer le dernier element d'un tableau : tab.pop();
 
 
 SPECIALE ORIENTER HTML ET classique
