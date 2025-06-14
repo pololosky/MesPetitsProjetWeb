@@ -1,5 +1,5 @@
 let tours = 0;
-let moves = new Array(9);
+let moves = ["","","","","","","","",""];
 let countCercle = 0;
 let countCroix = 0;
 const scoreCercle = document.getElementById("cercle");
@@ -47,7 +47,7 @@ function verify(a, b, c) {
   if (
     moves[a] === moves[b] &&
     moves[b] === moves[c] &&
-    moves[a].trim() !== " " &&
+    moves[a] !== "" &&
     moves[a] !== null
   ) {
     alert("Manche remporter");
@@ -76,7 +76,7 @@ function refreshTab() {
     const forme = document.getElementById(`${i}`);
     forme.innerHTML = "";
     // toujours une erreur a cet niveau
-    // moves[i] = null;
+    moves[i] = "";
   }
   moves = new Array(9);
   alert(moves[1]);

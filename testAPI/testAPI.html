@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+ <html lang="fr">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        //methode json
+        //on creer une const pour recuperer l'url de l'api
+        const url = "https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&appid=ef2b4eaa4c03cc243e4d763624b56ced"
+        //on fait une requete get pour recuperer les infos
+        fetch(url)
+        //on transforme les reponse du get en format json
+        .then(Response => Response.json())
+        .then(data => {
+            let conseil = document.createElement('p')
+            conseil.innerHTML = `conseil du jour: "${data.data}"`
+            document.body.appendChild(conseil);
+        })
+    </script>
+ </body>
+ </html>

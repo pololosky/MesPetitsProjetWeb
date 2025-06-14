@@ -11,3 +11,14 @@ function factorielle(nbr) {
 let nbrverif = 4;
 console.log(`Votre factorielle est: ${factorielle(nbrverif)}`);
 
+//declons un objet
+const users = {
+  //cle : "valeur",
+  nom: "Kaleb",
+  age: 20,
+  sexe: "M",
+  questions: ["bonjours", "hello"],
+};
+//afficher un objet
+console.log(users);
+console.log(users.questions[0]);

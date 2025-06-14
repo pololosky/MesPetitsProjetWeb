@@ -46,6 +46,10 @@ IMPORTANT LES OBJTES ET TABLEAU EN JAVASCRIPT
 types differens c'est la force de js)
 *maintenant essayons de modifier cet objet : obj.name = "giannio" (on a modifier l'attribut nom de notre objet tab)
 *pour recuperer les cles(noms des attributs) : Object.keys(obj);
+*pour recuperer toutes les valeurs d'un objet : Object.values(obj);
+*timecode si un jour j'en ai besoin : 2h06m27s
+*pour dupliquer un objet sans dupliquer la reference : let obj2 = {...obj}
+*on peut destructurer des objet comme avec les tableux : let {taille} = obj (ici c'est des {} et non des [])
 //
 *declarer un tableau en js : const tab = ["bonjours","Kaleb"]; (ici c'est tableau a contenant deux choses)
 *pour modifer un tableau : tab[0] = "Salut"; (ici on utilise plutot l'indice comme avec un tableau classique)
@@ -54,10 +58,21 @@ affectera egalement l'autre : c'est le principe de type de reference car un tabl
 mais des adresses
 *avec const on ne peut pas changer les references mais seulement les contenues alors qu'avec let on peut tout 
 changer
+*on peut faire let [n1,n2,n3,...n4] = tab : c'est ce qu'on appelle la deconstruction et les n1,n2 sont en fait des variables
+qui vont recuperer individuellemnt les valeurs du premier puis second index de tab et ainsi de suite
+(ici ...n4 se charge de recuperer tout les autres valeurs des index qui restent et de les mettre dans un tableau)
 *pour ajouter un element a la fin d'un tableau : tab.push("ce que tu veux");
 *pour ajouter un element au debut d'un tableau : tab.unshift("ce que tu veux");
 *pour supprimer le premier element d'un tableau : tab.shift();
 *pour supprimer le dernier element d'un tableau : tab.pop();
+NB : on peut evidement creer un tableau d'objets : let users = [{nom:kaka,age:15},{nom:koko,age:20}]
+*pour par exemple filtrer un tableau de nombre pour ne retourner que les nombres positifs : 
+tab2 = tab.filter( (num) => num > 0 )
+*pour verifier une conditions sur un tableau : tab2 = tab.some(num => num > 100) donc ici on verifie si tab
+contient au moin un nombre superieur a 100 et tab2 sera donc a true
+On a aussi tab.every() qui lui renvoie true si tous les elements du tableau verifie la condition
+*pour inverser les elemnts d'un tableau : tab = tab.reverse()
+*pour 
 
 
 SPECIALE ORIENTER HTML ET classique
