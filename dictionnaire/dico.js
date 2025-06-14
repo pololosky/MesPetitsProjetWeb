@@ -1,3 +1,4 @@
+//ici on import la fonction createClient de pexel
 const input = document.getElementById("saisi");
 const reponse = document.getElementById("reponse");
 
@@ -21,5 +22,6 @@ function connectAPI(mot) {
     .then((data) => {
       reponse.style.display = "flex";
       reponse.innerHTML = `Definition : ${data[0].meanings[0].definitions[0].definition}`;
+      // reponse.innerHTML += `se prononce : ${data[0].phonetics[0].text}`;
     });
 }
