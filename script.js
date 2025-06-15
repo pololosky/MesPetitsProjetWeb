@@ -22,3 +22,9 @@ const users = {
 //afficher un objet
 console.log(users);
 console.log(users.questions[0]);
+
+const img = {
+  "id" : "lavie"
+}
+
+console.log(img.id)

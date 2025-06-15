@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +11,12 @@ html {
   --var-blanc: #fff;
 }
 body {
-  font-family: 'Abril Fatface';
-  position: relative;
-  height: 100vh;
+  font-family: "Abril Fatface";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  height: auto;
   background: linear-gradient(
     180deg,
     var(--var-blanc) 1%,
@@ -66,8 +69,8 @@ a:hover {
   display: flex;
   align-items: center;
   padding: 20px;
-  margin-top: 50px;
-  gap: 20px;
+  margin-top: 30px;
+  gap: 10px;
   flex-direction: column;
 }
 .rechecher .form {
@@ -89,7 +92,7 @@ a:hover {
 }
 .rechecher .form button {
   font-size: 20px;
-  font-family: 'Abril Fatface';
+  font-family: "Abril Fatface";
   padding: 15px;
   border-radius: 10px;
   background-color: var(--var-back1);
@@ -103,46 +106,65 @@ a:hover {
 }
 #reponse {
   display: none;
-  box-shadow: 1px 2px 3px gray;
+  box-shadow: 1px 2px 5px white;
   background-color: var(--var-back1);
   color: var(--var-blanc);
   width: 720px;
-  min-height: 100px;
+  min-height: 50px;
   height: auto;
   border-radius: 10px;
   padding: 10px;
   font-size: 20px;
   animation: anime1 0.3s ease;
 }
+#image {
+  display: none;
+  box-shadow: 1px 2px 5px white;
+  background-color: var(--var-back1);
+  color: var(--var-blanc);
+  width: 720px;
+  min-height: 100px;
+  height: auto;
+  border-radius: 10px;
+  justify-content: center;
+  padding: 5px;
+  font-size: 20px;
+  animation: anime1 0.3s ease;
+}
+#image img{
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
 @keyframes anime1 {
   0% {
     transform: scale(0);
   }
-   10% {
+  10% {
     transform: scale(0.1);
   }
   20% {
-    transform: scale(0.20);
+    transform: scale(0.2);
   }
-   30% {
+  30% {
     transform: scale(0.3);
   }
-   40% {
+  40% {
     transform: scale(0.4);
   }
   50% {
     transform: scale(0.5);
   }
-   60% {
+  60% {
     transform: scale(0.6);
   }
   70% {
     transform: scale(0.7);
   }
-   80% {
+  80% {
     transform: scale(0.8);
   }
-   90% {
+  90% {
     transform: scale(0.9);
   }
   100% {
@@ -150,17 +172,23 @@ a:hover {
   }
 }
 footer {
-  letter-spacing: 2px;
   display: flex;
-  position: absolute;
+  padding: 10px;
+  margin-top: 20vh;
+  letter-spacing: 2px;
   width: 100%;
-  top: 94vh;
   justify-content: center;
   color: var(--var-blanc);
 }
-footer a{
+footer a {
   padding: 5px;
   background-color: var(--var-back2);
   color: var(--var-blanc);
   border-radius: 10px;
+}
+@media screen and (max-width: 765px) {
+  body {
+    min-width: 100vh;
+    width: auto;
+  }
 }
