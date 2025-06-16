@@ -19,7 +19,7 @@ body {
   height: auto;
   background: linear-gradient(
     180deg,
-    var(--var-blanc) 1%,
+    var(--var-blanc) 35%,
     var(--var-back1) 100%
   );
 }
@@ -131,7 +131,7 @@ a:hover {
   font-size: 20px;
   animation: anime1 0.3s ease;
 }
-#image img{
+#image img {
   width: 400px;
   height: auto;
   border-radius: 10px;
@@ -188,7 +188,59 @@ footer a {
 }
 @media screen and (max-width: 765px) {
   body {
-    min-width: 100vh;
-    width: auto;
+  background: linear-gradient(
+    180deg,
+    var(--var-blanc) 20%,
+    var(--var-back1) 100%
+  );
+}
+  .droite {
+    font-size: 15px;
   }
+  .gauche {
+    gap: 10px;
+    flex-direction:column ;
+  }
+  .gauche a {
+  padding: 2px;
+  min-width: 150px;
+  font-size: 15px;
+  justify-content: center;
+}
+.titre {
+  margin-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.rechecher .form {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.rechecher .form input {
+  width: 250px;
+  padding: 10px;
+  font-size: 25px;
+}
+.rechecher .form input:focus {
+  outline: none;
+  border: 2px solid #7d4ffe;
+}
+.rechecher .form button {
+  font-size: 15px;
+}
+.rechecher .form button:hover {
+  background-color: var(--var-back2);
+}
+#reponse {
+  display: none;
+  width: 355px;
+}
+#image {
+  width: 355px;
+}
+#image img {
+  width: 200px;
+}
 }

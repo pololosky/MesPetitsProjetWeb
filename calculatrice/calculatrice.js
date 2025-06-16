@@ -15,6 +15,7 @@ function ajouter(nbr) {
 function resultat(nbr) {
   let result;
   // ici c'st le probleme avec le ctr
+  // doConvertion(de.value, a.value);
   if (nbr == 0) {
     ecran.value = "";
   } else {
@@ -42,3 +43,16 @@ function shoxConversion() {
     ecran_conversion.style.width = "60%";
   }
 }
+
+function doConvertion(de, a) {
+  const convertKey = "174325d0975396d8a2d5bdd3";
+  const convertUrl = `https://v6.exchangerate-api.com/v6/${convertKey}/latest/${de}`;
+  fetch(convertUrl).then((Response) => Response.json());
+  alert(Response.json()).then((data) => {
+    alert(data.a);
+  });
+}
+
+// while (ecran.value != "") {
+//   doConvertion(de.value, a.value);
+// }

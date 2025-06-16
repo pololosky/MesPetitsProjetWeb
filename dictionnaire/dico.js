@@ -7,17 +7,16 @@ const unsplashKey = "f3KWzGAONkFzFoIcnsHG03zJN5sE8dpy3yFW9UDFCSw";
 
 function recherche() {
   const mot = input.value;
-  connectAPI(mot);
+  if (mot === "") {
+    return;
+  }
+  afficherDefinition(mot);
   afficheImage(mot);
   input.value = "";
 }
 
-function connectAPI(mot) {
+function afficherDefinition(mot) {
   //si le mot est vide pas la peine
-  if (mot === "") {
-    reponse.style.display = "none";
-    return;
-  }
   //reference l'url de notre API
   const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${mot}`;
   //envoie d'une requete get

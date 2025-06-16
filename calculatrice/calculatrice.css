@@ -46,9 +46,9 @@ body {
 #de{
   display: none;
 }
-#conversion_btn{
+/* #conversion_btn{
   display: none;
-}
+} */
 .calcu {
   display: flex;
   flex-direction: column;
