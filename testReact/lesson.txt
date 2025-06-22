@@ -1,0 +1,36 @@
+alors on vas apprendre react pret ??
+_react est un outils qui 
+*on peut develloper en utilisant seulement du react pur (vanila react) ou en passant par un framework 
+comme next.js (ce qui est plus recommander)
+
+I-/ Developpement en vanila react
+*si vous avez besoin de faire un petit projet qui necessite quand meme de la manipulation de donne il n'est pas
+necessaire de passer par un framework. Dans cette premiere parti nous allons develloper avec serulement du
+react pur.
+
+*les outils a installer :
+_ node js : Node.js est un environnement d'exécution JavaScript basé sur le moteur V8 de Google. 
+Il permet d'exécuter du code JavaScript en dehors d'un navigateur, ce qui en fait un outil puissant 
+pour développer des applications côté serveur (backend), des outils en ligne de commande et bien plus encore.
+_ vite js : permet de demarer un projet react rapidement sans se soucier d'une bonne parti des configurations
+de base et accelere egalement (bon c'est dans le nom hein) les processus lors du dev(compilations,tests...). Pour
+installer vite : aller sur le site de vite -> get started -> taper la premierr commande -> choisir react avec js ->
+
+*notion de composant : en react , un composant est une brique de base utiliser pour construire des interfaces 
+utilisateur.C'est une classe qui renvois du jsx.Ils sont reutilisable se qui nous evite de recreer des composants
+similaires.on peut creer des composants avec des fonctions ou bien avec des classes et l'utilisation des fonctions 
+est plus populaire.
+_en react le nom d'un composant (function ou classe) doit toujours commencer par une lettre majuscule.
+_pour declarer un composant dans le render on fait : render(<composant/>);
+_sagissant d'une fonctions js on peut tout a fait y declarer et utiliser des variables
+_un composants ne renvois q'un seul element : si c'est un seul h1 alors il ne peut renvoyer que ce h1 la, mais un
+element renvoyer paut aussi avoir des enfants. (spoller si on veut mettre plusieurs elements alors vaut mieux creer un div)
+_ on peut imbriquer des composants c'est-a-dire metrre des composants dans d'autre composants.
+_ voici une sorte de boucle if-else : nom === "Kaleb"?"c'est bon":"C'est pas bon" (sa renvoie c'est bon si la condition
+est respecter et l'autre si ce n'est aps le cas)
+_imaginons que vous ayez un composant qui renvoie une div, contrairement a du html vous ne pouvez pas y assigner une
+class (car on est en js et que class veut dire autre chose) on peut si on veut faire : <div className=""><div/>
+(ici remarquez que le mot qui suit commence par une majuscule) 
+_ contrairement au html, les balise qu'on declare en jsx doivnet toujours etre fermer (Expl: <img><img/>)
+
+*le rendu conditionnel vous pouvez vous servir de la structure conditionnel vue plus haut pour faire des conditions
