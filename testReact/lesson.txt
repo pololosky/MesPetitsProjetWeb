@@ -12,9 +12,14 @@ react pur.
 _ node js : Node.js est un environnement d'exécution JavaScript basé sur le moteur V8 de Google. 
 Il permet d'exécuter du code JavaScript en dehors d'un navigateur, ce qui en fait un outil puissant 
 pour développer des applications côté serveur (backend), des outils en ligne de commande et bien plus encore.
+_ react developper tools : extension chrome premet de voir l'arborescence (organisation) de nos composant
+ react et de debug facilement
 _ vite js : permet de demarer un projet react rapidement sans se soucier d'une bonne parti des configurations
 de base et accelere egalement (bon c'est dans le nom hein) les processus lors du dev(compilations,tests...). Pour
-installer vite : aller sur le site de vite -> get started -> taper la premierr commande -> choisir react avec js ->
+installer vite : aller sur le site de vite -> get started -> taper la premierr commande -> choisir react avec js
+_E27 + react : extension vscode permet de gagner du temps
+
+------------ DEBUT DU COURS ----------------------------------------------------------------------------------
 
 *notion de composant : en react , un composant est une brique de base utiliser pour construire des interfaces 
 utilisateur.C'est une classe qui renvois du jsx.Ils sont reutilisable se qui nous evite de recreer des composants
@@ -32,5 +37,46 @@ _imaginons que vous ayez un composant qui renvoie une div, contrairement a du ht
 class (car on est en js et que class veut dire autre chose) on peut si on veut faire : <div className=""><div/>
 (ici remarquez que le mot qui suit commence par une majuscule) 
 _ contrairement au html, les balise qu'on declare en jsx doivnet toujours etre fermer (Expl: <img><img/>)
+_ NB : quand on place un composant dans une module il faut importer dans cette classe jsx : 
+import React, { Component } from "react";
+_un module ne peut exporter qu'un seul composant
+_NB : il faut verifier que le navigateur ne traduise pas la langue cela peut parfois modifier le DOM et donc
+affecter le rendu de votre composant.
 
 *le rendu conditionnel vous pouvez vous servir de la structure conditionnel vue plus haut pour faire des conditions
+
+*on peut egalement creer des composants en react pur sans jsx : 
+// composant react pur sans jsx
+const h2 = React.createElement("h2", null, "voici un composant react sans jsx");
+
+*le prosp est une propriete qu'on passe d'un composant parent a son enfant ce qui permet au composant d'etre reutilisable
+et dynamique. En gros c'est un parametre.
+
+*le children est aussi un parametre qu'on peut passer dans un contenaire mais lui c'est pour renvoie une balise
+html qui heritera du style inposer au contenaire.
+
+*Comment rendre une liste en react : 
+_Bon une liste c'est un ensemble d'elements similaires: articles, liste d'utilisateur
+_ syntaxe apres avoir creer son objet ou tableau : { users.map(p=>{
+    <h1>{p.nom}<\h1>
+})}
+(dans le cas d'un tableau contenant une liste d'objets)
+_ NB: Dans une liste il est tres important de declarer des key pour chaque element lorsqu'on retourne la liste.
+Cela permet de differencier les 
+PRATIQUE : 
+
+*Interraction et gestion d'etat avec react grace aux events (evenement)
+_les states sont des variable d'etats qui contient deux parametre la valeur initiale et la fonction premettant de 
+modifier cette valeur
+_pour les utiliser dans un composant il faut tout d'abord importer le hook useState de react
+import React, { useState } from "react";
+_pour la suite confere le composant app.jsx
+
+*les effets
+_ils permettent d'executer du code apres le rendu pour synchroniser les composants avec un services exterieur. Cela
+permet d'executer des actions automatiquement sans l'intervention du client
+_pour les utiliser il faut importer le hook useEffect de react
+import React, { useEffect } from "react";
+_pour la suite confere le composant app2.jsx
+_un useEffect prend deux parametres :une fonction fleche qui contient le code a executeret un tableau de dependances
+qui permet de specifier quand l'effet doit etre executé
